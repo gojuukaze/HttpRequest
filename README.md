@@ -1,12 +1,33 @@
 HttpRequest
 =======
 A simple `HTTP Request` package for golang. `GET` `POST` `DELETE` `PUT` `Upload`
-
+fork from [github.com/kirinlabs/HttpRequest](github.com/kirinlabs/HttpRequest) 
+change some method
 
 
 ### Installation
-go get github.com/kirinlabs/HttpRequest
+go get github.com/gojuukaze/HttpRequest
 
+### Difference
+```go
+// gojuukaze/HttpRequest
+m,err := res.JsonMap() //Format the json return map
+log.Println(u)
+
+// kirinlabs/HttpRequest
+var m [string]interface{}
+err := res.Json(&m)
+
+//
+
+// gojuukaze/HttpRequest
+s,err := res.JsonString() //Format the json return string
+log.Println(s)
+
+// kirinlabs/HttpRequest
+s,err := res.Export()
+
+```
 
 ### How do we use HttpRequest?
 
