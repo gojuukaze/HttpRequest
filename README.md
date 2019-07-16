@@ -6,7 +6,10 @@ change some method
 
 
 ### Installation
+```bash
 go get github.com/gojuukaze/HttpRequest
+
+```
 
 ### Difference
 ```go
