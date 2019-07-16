@@ -1,6 +1,6 @@
 HttpRequest
 =======
-A simple `HTTP Request` package for golang. `GET` `POST` `DELETE` `PUT` `Upload`
+A simple `HTTP Request` package for golang. `GET` `POST` `DELETE` `PUT` `Upload`  
 fork from [github.com/kirinlabs/HttpRequest](github.com/kirinlabs/HttpRequest) 
 change some method
 
