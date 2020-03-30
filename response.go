@@ -106,6 +106,40 @@ func (r *Response) Unmarshal(v interface{}) error {
 	return nil
 }
 
+func (r *Response) JsonMap() (map[string]interface{}, error) {
+	b, err := r.Body()
+	if err != nil {
+		return nil, err
+	}
+
+	var m = make(map[string]interface{})
+	err = json.Unmarshal(b, &m)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return m, nil
+}
+
+func (r *Response) JsonString() (string, error) {
+
+	b, err := r.Body()
+	if err != nil {
+		return "", err
+	}
+
+	var i interface{}
+
+	err = json.Unmarshal(b, &i)
+	if err != nil {
+		return "", errors.New("illegal json: " + err.Error())
+	}
+
+	return Json(i), nil
+}
+
+
 func (r *Response) Close() error {
 	if r != nil {
 		return r.resp.Body.Close()
