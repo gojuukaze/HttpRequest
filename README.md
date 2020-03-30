@@ -1,7 +1,7 @@
 HttpRequest
 =======
-A simple `HTTP Request` package for golang. `GET` `POST` `DELETE` `PUT` `Upload`
-fork from [github.com/kirinlabs/HttpRequest](github.com/kirinlabs/HttpRequest) 
+A simple `HTTP Request` package for golang. `GET` `POST` `DELETE` `PUT` `Upload`  
+fork from [github.com/kirinlabs/HttpRequest](https://github.com/kirinlabs/HttpRequest) 
 change some method
 
 
@@ -29,6 +29,7 @@ log.Println(s)
 
 // kirinlabs/HttpRequest
 s,err := res.Export()
+```
 
 ### How do we use HttpRequest?
 
